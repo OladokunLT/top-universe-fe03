@@ -1,0 +1,201 @@
+@import url("./font.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.d-flex {
+    display: flex;
+}
+.justify-space-between {
+    justify-content: space-between;
+}
+.align-items-center {
+    align-items: center;
+}
+.gap {
+    gap: 10px;
+}
+button {
+    padding: 10.5px 16.5px;
+    color: #FFFFFF;
+    background: #18181B;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+body {
+    width: 90vw;
+    min-width: 320px;
+    margin: 0 auto;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #18181B;
+    background: #FAFAFA;
+}
+/* Header section */
+header {
+    display: flex;
+    margin-bottom: 100px;
+    align-items: center;
+}
+nav {
+    display: flex;
+    width: 100%;
+}
+header nav ul {
+    list-style: none;
+    padding: 27px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    align-items: center;
+    gap: 14px;
+}
+header nav ul li{
+    cursor: pointer;
+}
+.menu-icon {
+    display: none;
+    align-items: center;
+}
+
+/* Main section css */
+/* Section - left box */
+.detail {
+    width: 50%;
+}
+
+h1 {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 66px;
+    color: #18181B;
+    margin-bottom: 20px;
+}
+.para {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: 'Inter', sans-serif;
+    color: #52525B;
+    display: flex;
+    align-items: center;
+    margin-bottom: 41px;
+}
+
+.form {
+    width: 100%;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 2px;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between ;
+}
+input {
+    padding: 10px ;
+    flex-grow: .5;
+    border: none;
+}
+.form button {
+    display: flex;
+    text-align: right;
+} 
+
+.card-number {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 62px;
+}
+.card-deliver {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Right section box */
+.fig {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+} 
+img {
+    width: 100;
+    height: 100;
+}
+
+@media (width <= 800px) {
+    
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    nav {
+       position: absolute;
+       top: 50px;
+       /* width: 100%; */
+       display: none;
+       right: 0;
+       left: 0;
+       background: rgba(100, 100, 100, .9);
+       color: white;
+    }
+    nav ul {
+        flex-direction: column;
+        float: right;
+    }
+    .md-flex-column {
+        flex-direction: column;
+    }
+
+    .detail {
+        width: 90%;
+    }
+    .fig {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .para {
+        margin-bottom: 41px;
+    }
+    .form {
+        flex-direction: column;
+    }
+    input, 
+    .form button {
+        width: 99%;
+    }
+    
+}
+
+@media (max-width: 520px) {
+    .fig {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .fig img {
+        object-fit: cover;
+    }
+    .card-number {
+        font-size: calc(42px * 0.75) ;
+        font-weight: 500;
+        line-height: calc(62px * .5);
+    }
+    .card-deliver {
+        font-size: calc(13px * .75);
+        font-weight: 500;
+    }
+}
